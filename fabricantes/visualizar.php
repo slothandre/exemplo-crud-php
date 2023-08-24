@@ -1,3 +1,11 @@
+<?php
+    /* Importando as funções de manipulação de fabricantes */
+    require_once "../src/funcoes-fabricantes.php"; 
+
+    /* Guardando o retorno/resultado da função lerFabricantes */
+    $dadosDeFabricantes = lerFabricantes($conexao);
+?>
+<pre><?=var_dump($dadosDeFabricantes)?></pre>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -13,6 +21,30 @@
     <main>
         <h2>Lendo e carregando todos os fabricantes.</h2>
         <p><a href="inserir.php">Inserir novo fabricante</a></p>
+
+        <table border="1">
+            <caption>Lista de Fabricantes</caption>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th colspan="2">Operações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                    foreach ($dadosDeFabricantes as $dados) { ?>
+                        <tr>
+                            <td><?=$dados["id"]?></td>
+                            <td><?=$dados["nome"]?></td>
+                            <td><a href="">Editar</a></td>
+                            <td><a href="">Excluir</a></td>
+                        </tr>
+                    <?php
+                    }
+                ?>
+            </tbody>
+        </table>
     </main>
 </body>
 </html>
