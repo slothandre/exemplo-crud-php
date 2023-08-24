@@ -5,7 +5,6 @@
     /* Guardando o retorno/resultado da função lerFabricantes */
     $dadosDeFabricantes = lerFabricantes($conexao);
 ?>
-<pre><?=var_dump($dadosDeFabricantes)?></pre>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
