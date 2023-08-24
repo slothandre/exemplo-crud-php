@@ -32,10 +32,10 @@
             </thead>
             <tbody>
                 <?php
-                    foreach ($dadosDeFabricantes as $dados) { ?>
+                    foreach ($dadosDeFabricantes as $fabricante) { ?>
                         <tr>
-                            <td><?=$dados["id"]?></td>
-                            <td><?=$dados["nome"]?></td>
+                            <td><?=$fabricante["id"]?></td>
+                            <td><?=$fabricante["nome"]?></td>
                             <td><a href="">Editar</a></td>
                             <td><a href="">Excluir</a></td>
                         </tr>
