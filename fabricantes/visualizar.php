@@ -22,7 +22,7 @@
         <h2>Lendo e carregando todos os fabricantes.</h2>
         <p><a href="inserir.php">Inserir novo fabricante</a></p>
 
-        <table border="1">
+        <table>
             <caption>Lista de Fabricantes</caption>
             <thead>
                 <tr>
