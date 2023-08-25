@@ -39,7 +39,10 @@
                         <tr>
                             <td><?=$fabricante["id"]?></td>
                             <td><?=$fabricante["nome"]?></td>
-                            <td><a href="">Editar</a></td>
+                            <!-- Link DINÂMICO
+                            A URL do href precisa de parâmetro com dados
+                            dinâmicos (no caso, o ID de cada fabricante) -->
+                            <td><a href="atualizar.php?id=<?=$fabricante["id"]?>">Editar</a></td>
                             <td><a href="">Excluir</a></td>
                         </tr>
                     <?php
