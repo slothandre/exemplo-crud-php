@@ -45,10 +45,26 @@
             vem o valor ($nomeDoFabricante) e de que tipo ele é
             (PDO::PARAM_STR) */
             $consulta->bindValue(":nome", $nomeDoFabricante, PDO::PARAM_STR);
-            
+
             $consulta->execute();
         } catch (Exception $erro) {
             die("Erro ao inserir: ".$erro->getMessage());
         }
-    } // fim inserirFabricante
+    }; // fim inserirFabricante
+
+    // Usada em fabricantes/atualizar.php
+    function lerUmFabricante(PDO $conexao, int $idFabricante){
+        $sql = "SELECT * FROM fabricantes WHERE id = :id";
+
+        try {
+            $consulta = $conexao->prepare($sql);
+            $consulta->bindValue(":id", $idFabricante, PDO::PARAM_INT);
+            $consulta->execute();
+            $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
+        } catch (Exception $erro) {
+            die("Erro ao carregar: ".$erro->getMessage());
+        };
+
+        return $resultado;
+    }; // fim lerUmFabricante
 ?>
