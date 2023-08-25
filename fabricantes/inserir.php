@@ -1,3 +1,14 @@
+<?php
+/* Verificando se o formulário/botão foi acionado */
+if(isset($_POST["inserir"])){
+
+    // Capturando o valor digitado do nome e sanitizando
+    $nome = filter_input(INPUT_POST, "nome", FILTER_SANITIZE_SPECIAL_CHARS);
+
+    // Outra maneira de sanitizar;
+    // $nome = filter_var($_POST["nome"], FILTER_SANITIZE_SPECIAL_CHARS);
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -14,7 +25,7 @@
         <form action="" method="post">
             <p>
                 <label for="nome">Nome:</label>
-                <input type="text" name="nome" id="nome">
+                <input required type="text" name="nome" id="nome">
             </p>
             <button type="submit" name="inserir">Inserir fabricante</button>
         </form>
