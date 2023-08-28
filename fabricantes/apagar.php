@@ -5,7 +5,7 @@
 
     if(isset($_POST["apagar"])){
         apagarFabricante($conexao, $id);
-        header("location:visualizar.php");
+        header("location:visualizar.php?status=apagado");
     }
 
     if(isset($_POST["nao"])){
@@ -33,7 +33,7 @@
     <main>
         <form action="" method="post">
             <p>
-                Você tem certeza que deseja apagar o fabricante <?=$fabricante["nome"]?>? ATENÇÃO, CAMINHO SEM VOLTA!!!!!
+                Você tem certeza que deseja apagar o fabricante <?=$fabricante["nome"]?>? <b>ATENÇÃO, CAMINHO SEM VOLTA!!!!!</b>
             </p>
             <p>
                 <button type="submit" name="apagar">Sim</button>

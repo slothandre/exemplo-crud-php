@@ -24,6 +24,12 @@
         <h2>Lendo e carregando todos os fabricantes.</h2>
         <p><a href="inserir.php">Inserir novo fabricante</a></p>
 
+        <?php if(isset($_GET["status"]) && $_GET["status"] === "sucesso"){ ?>
+            <h2 style="color:blue">Fabricante atualizado com sucesso!</h2>
+        <?php } elseif(isset($_GET["status"]) && $_GET["status"] === "apagado"){ ?>
+            <h2 style="color:red">Fabricante apagado com sucesso!</h2>
+        <?php } ?>
+
         <table>
             <caption>Lista de Fabricantes: <b><?=$quantidade?></b></caption>
             <thead>
