@@ -2,11 +2,15 @@
     require_once "conecta.php";
 
     function lerProdutos(PDO $conexao):array{
-        // SQL DE SELECT
-        // TRY/CATCH
-            // PREPARE...
-            // EXECUTE...
-            // GERAR RESULTADO COMO ARRAY
-        // RETORNAR O RESULTADO como array
+        $sql = "SELECT nome, preco, quantidade FROM produtos ORDER BY nome";
+        
+        try {
+            $consulta = $conexao->prepare($sql);
+            $consulta->execute();
+            $resultado = $consulta->fetchAll(PDO::FETCH_ASSOC);
+        } catch (Exception $erro) {
+            die("Erro ao carregar produtos: ".$erro->getMessage());
+        }
+        return $resultado;
     };
 ?>

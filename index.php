@@ -17,7 +17,7 @@
 
         <ul>
             <li><a href="fabricantes/visualizar.php">Fabricantes</a></li>
-            <li><a href="produtos/visualizacao.php">Produtos</a></li>
+            <li><a href="produtos/visualizar.php">Produtos</a></li>
         </ul>
     </main>
 </body>
