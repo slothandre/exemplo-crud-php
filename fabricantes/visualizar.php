@@ -14,6 +14,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fabricantes - Visualização</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
 <body>
     <header>
@@ -30,7 +31,7 @@
             <h2 style="color:red">Fabricante apagado com sucesso!</h2>
         <?php } ?>
 
-        <table>
+        <table class="table table-bordered table-striped table-hover caption-top">
             <caption>Lista de Fabricantes: <b><?=$quantidade?></b></caption>
             <thead>
                 <tr>
@@ -39,7 +40,7 @@
                     <th colspan="2">Operações</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="table-group-divider">
                 <?php
                     foreach ($listaDeFabricantes as $fabricante) { ?>
                         <tr>
