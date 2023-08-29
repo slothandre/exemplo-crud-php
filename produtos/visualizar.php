@@ -29,16 +29,16 @@
         <p><a href="inserir.php">Inserir novo produto</a></p>
 
         <section class="produtos">
-            <?php foreach($listaDeProdutos as $produto){ 
-                $preco = formatarPreco($produto["preco"]);
-                ?>
+            <?php foreach($listaDeProdutos as $produto){ ?>
                 <article class="produto card">
                     <div class="card-header">
-                        <h3><?=$produto["nome"]?></h3>
+                        <h3><?=$produto["produto"]?></h3>
+                        <h4><?=$produto["fabricante"]?></h4>
                     </div>
                     <div class="card-body">
-                        <p><b>Preço: </b><?=$preco?></p>
+                        <p><b>Preço: </b><?=formatarPreco($produto["preco"])?></p>
                         <p><b>Quantidade: </b><?=$produto["quantidade"]?></p>
+                        <p><b>Preço total: </b><?=formatarPreco($produto["preco_total"])?></p>
                     </div>
                 </article>
             <?php } ?>
