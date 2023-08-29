@@ -28,7 +28,7 @@
         <h2>Lendo e carregando todos os produtos.</h2>
         <p><a href="inserir.php">Inserir novo produto</a></p>
 
-        <section class="produtos">
+        <section class="m-4 produtos">
             <?php foreach($listaDeProdutos as $produto){ ?>
                 <article class="produto card">
                     <div class="card-header">

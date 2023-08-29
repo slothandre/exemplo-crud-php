@@ -33,7 +33,7 @@
 
         <table class="table table-bordered table-striped table-hover caption-top">
             <caption>Lista de Fabricantes: <b><?=$quantidade?></b></caption>
-            <thead>
+            <thead class="text-center">
                 <tr>
                     <th>ID</th>
                     <th>Nome</th>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 25-Ago-2023 às 16:52
+-- Tempo de geração: 29-Ago-2023 às 16:54
 -- Versão do servidor: 10.4.28-MariaDB
 -- versão do PHP: 8.2.4
 
@@ -45,10 +45,10 @@ INSERT INTO `fabricantes` (`id`, `nome`) VALUES
 (6, 'Brastemp'),
 (7, 'Positivo'),
 (8, 'Microsoft'),
-(9, 'Xanomi'),
 (10, 'Intel'),
 (11, 'Sadia'),
-(12, 'Valve');
+(15, 'Xanomi'),
+(16, 'Valve');
 
 -- --------------------------------------------------------
 
@@ -103,7 +103,7 @@ ALTER TABLE `produtos`
 -- AUTO_INCREMENT de tabela `fabricantes`
 --
 ALTER TABLE `fabricantes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de tabela `produtos`
