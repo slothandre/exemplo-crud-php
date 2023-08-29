@@ -1,7 +1,7 @@
 <?php
     require_once "conecta.php";
 
-    function lerProdutos(PDO $conexao){
+    function lerProdutos(PDO $conexao):array{
         // SQL DE SELECT
         // TRY/CATCH
             // PREPARE...
