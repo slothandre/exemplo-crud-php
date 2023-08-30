@@ -18,12 +18,12 @@
 </head>
 <body>
     <header>
-        <h1>Fabricantes | SELECT - <a href="../index.php">Home</a></h1>
+        <h1 class="text-center">Fabricantes | SELECT - <a href="../index.php">Home</a></h1>
         <hr>
     </header>
-    <main>
+    <main class="container">
         <h2>Lendo e carregando todos os fabricantes.</h2>
-        <p><a href="inserir.php">Inserir novo fabricante</a></p>
+        <p><a href="inserir.php" class="btn btn-primary">Inserir novo fabricante</a></p>
 
         <?php if(isset($_GET["status"]) && $_GET["status"] === "sucesso"){ ?>
             <h2 style="color:blue">Fabricante atualizado com sucesso!</h2>
@@ -49,8 +49,8 @@
                             <!-- Link DINÂMICO
                             A URL do href precisa de parâmetro com dados
                             dinâmicos (no caso, o ID de cada fabricante) -->
-                            <td><a href="atualizar.php?id=<?=$fabricante["id"]?>">Editar</a></td>
-                            <td><a class="excluir" href="apagar.php?id=<?=$fabricante["id"]?>">Excluir</a></td>
+                            <td><a class="btn btn-primary" href="atualizar.php?id=<?=$fabricante["id"]?>">Editar</a></td>
+                            <td><a class="excluir btn btn-primary" href="apagar.php?id=<?=$fabricante["id"]?>">Excluir</a></td>
                         </tr>
                     <?php
                     }

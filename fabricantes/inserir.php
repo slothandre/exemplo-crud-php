@@ -24,22 +24,23 @@ if(isset($_POST["inserir"])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fabricantes - Inserção</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
 <body>
     <header>
-        <h1>Fabricantes | INSERT</h1>
+        <h1 class="text-center">Fabricantes | INSERT</h1>
         <hr>
     </header>
-    <main>
+    <main class="container">
         <form action="" method="post">
-            <p>
+            <p class="form-floating">
+                <input class="form-control" required type="text" name="nome" id="nome" placeholder="">
                 <label for="nome">Nome:</label>
-                <input required type="text" name="nome" id="nome">
             </p>
-            <button type="submit" name="inserir">Inserir fabricante</button>
+            <button type="submit" name="inserir" class="btn btn-primary">Inserir fabricante</button>
         </form>
         <hr>
-        <p><a href="visualizar.php">Voltar</a></p>
+        <p><a href="visualizar.php" class="btn btn-primary">Voltar</a></p>
     </main>
 </body>
 </html>

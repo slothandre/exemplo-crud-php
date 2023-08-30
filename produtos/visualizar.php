@@ -21,16 +21,16 @@
 </head>
 <body>
     <header>
-        <h1>Produtos | SELECT - <a href="../index.php">Home</a></h1>
+        <h1 class="text-center">Produtos | SELECT - <a href="../index.php">Home</a></h1>
         <hr>
     </header>
-    <main>
+    <main class="container">
         <h2>Lendo e carregando todos os produtos.</h2>
-        <p><a href="inserir.php">Inserir novo produto</a></p>
+        <p><a href="inserir.php" class="btn btn-primary">Inserir novo produto</a></p>
 
-        <section class="m-4 produtos">
+        <section class="produtos">
             <?php foreach($listaDeProdutos as $produto){ ?>
-                <article class="produto card">
+                <article class="produto card text-bg-info">
                     <div class="card-header">
                         <h3><?=$produto["produto"]?></h3>
                         <h4><?=$produto["fabricante"]?></h4>

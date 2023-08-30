@@ -23,25 +23,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fabricantes - Atualização</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
 <body>
     <header>
-        <h1>Fabricantes | SELECT/UPDATE</h1>
+        <h1 class="text-center">Fabricantes | SELECT/UPDATE</h1>
         <hr>
     </header>
-    <main>
+    <main class="container">
         <form action="" method="post">
             <!-- Campo oculto usado apenas para registro no formulário
             do id do fabricante que está sendo visualizado. -->
             <input type="hidden" name="id" value="<?=$fabricante["id"]?>">
-            <p>
+            <p class="form-floating">
+                <input class="form-control" value="<?=$fabricante["nome"]?>" required type="text" name="nome" id="nome" placeholder="">
                 <label for="nome">Nome:</label>
-                <input value="<?=$fabricante["nome"]?>" required type="text" name="nome" id="nome">
             </p>
-            <button type="submit" name="atualizar">Atualizar fabricante</button>
+            <button type="submit" name="atualizar" class="btn btn-primary">Atualizar fabricante</button>
         </form>
         <hr>
-        <p><a href="visualizar.php">Voltar</a></p>
+        <p><a href="visualizar.php" class="btn btn-primary">Voltar</a></p>
     </main>
 </body>
 </html>
