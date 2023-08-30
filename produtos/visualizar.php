@@ -18,6 +18,7 @@
         }
     </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 <body>
     <header>
@@ -39,6 +40,10 @@
                         <p><b>Preço: </b><?=formatarPreco($produto["preco"])?></p>
                         <p><b>Quantidade: </b><?=$produto["quantidade"]?></p>
                         <p><b>Preço total: </b><?=formatarPreco($produto["preco_total"])?></p>
+                        <hr>
+                        <p class="text-center">
+                            <a href="atualizar.php" class="btn btn-primary"><i class="bi bi-pencil"></i> Editar</a> <a href="" class="btn btn-primary"><i class="bi bi-trash"></i> Excluir</a>
+                        </p>
                     </div>
                 </article>
             <?php } ?>
