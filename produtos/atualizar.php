@@ -25,6 +25,7 @@
     </header>
     <main class="container">
         <form action="" method="post">
+            <input type="hidden" name="id" value="<?=$produto["id"]?>">
             <p class="form-floating">
                 <input class="form-control" type="text" name="nome" id="nome" required placeholder="" value="<?=$produto["nome"]?>">
                 <label for="nome">Nome:</label>
@@ -41,14 +42,16 @@
                 <select class="form-control" name="fabricante" id="fabricante" required>
                     <option value="">Selecione um fabricante</option>
                     <?php
-                        foreach($listaDeFabricantes as $fabricante){
-                            if($produto["fabricante_id"] === $fabricante["id"]){ ?>
-                                <option value="<?=$fabricante["id"]?>" selected><?=$fabricante["nome"]?></option>
-                            <?php } else { ?>
-                                <option value="<?=$fabricante["id"]?>"><?=$fabricante["nome"]?></option>
-                            <?php }
-                        };
-                    ?>
+                        foreach($listaDeFabricantes as $fabricante){ ?>
+                            <!-- Lógica/Algoritmo da seleção do fabricante
+                            Se a chave estrangeira dor idêntica à chave primária, ou
+                            seja, se o id do fabricante do produto (coluna
+                            fabricante_id da tabela produtos)
+                            for igual ao id do fabricante (coluna id da tabela
+                            fabricantes), então coloque o atributo "selected" no
+                            <option> -->
+                            <option <?php if($produto["fabricante_id"] === $fabricante["id"]) echo " selected "; ?>value="<?=$fabricante["id"]?>"><?=$fabricante["nome"]?></option>
+                        <?php }; ?>
                 </select>
                 <label for="fabricante">Fabricante:</label>
             </p>

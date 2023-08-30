@@ -43,7 +43,7 @@
                     </div>
                     <div class="card-footer">
                         <p class="text-center">
-                            <a href="atualizar.php?id=<?=$produto["id"]?>" class="btn btn-primary"><i class="bi bi-pencil"></i> Editar</a> <a href="" class="btn btn-primary"><i class="bi bi-trash"></i> Excluir</a>
+                            <a href="atualizar.php?id=<?=$produto["id"]?>" class="btn btn-primary"><i class="bi bi-pencil"></i> Editar</a> <a href="excluir.php?id=<?=$produto["id"]?>" class="btn btn-primary"><i class="bi bi-trash"></i> Excluir</a>
                         </p>
                     </div>
                 </article>
