@@ -31,18 +31,19 @@
 
         <section class="produtos">
             <?php foreach($listaDeProdutos as $produto){ ?>
-                <article class="produto card text-bg-info">
+                <article class="produto card border-primary shadow">
                     <div class="card-header">
                         <h3><?=$produto["produto"]?></h3>
                         <h4><?=$produto["fabricante"]?></h4>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body text-primary">
                         <p><b>Preço: </b><?=formatarPreco($produto["preco"])?></p>
                         <p><b>Quantidade: </b><?=$produto["quantidade"]?></p>
                         <p><b>Preço total: </b><?=formatarPreco($produto["preco_total"])?></p>
-                        <hr>
+                    </div>
+                    <div class="card-footer">
                         <p class="text-center">
-                            <a href="atualizar.php" class="btn btn-primary"><i class="bi bi-pencil"></i> Editar</a> <a href="" class="btn btn-primary"><i class="bi bi-trash"></i> Excluir</a>
+                            <a href="atualizar.php?id=<?=$produto["id"]?>" class="btn btn-primary"><i class="bi bi-pencil"></i> Editar</a> <a href="" class="btn btn-primary"><i class="bi bi-trash"></i> Excluir</a>
                         </p>
                     </div>
                 </article>
