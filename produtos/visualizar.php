@@ -37,12 +37,13 @@
                     <div class="card-footer">
                         <p class="card-link row justify-content-around">
                             <a href="atualizar.php?id=<?=$produto["id"]?>" class="col-5 btn btn-primary"><i class="bi bi-pencil"></i> Editar</a>
-                            <a href="excluir.php?id=<?=$produto["id"]?>" class="col-5 btn btn-primary"><i class="bi bi-trash"></i> Excluir</a>
+                            <a href="excluir.php?id=<?=$produto["id"]?>" class="excluir col-5 btn btn-primary"><i class="bi bi-trash"></i> Excluir</a>
                         </p>
                     </div>
                 </article>
             <?php } ?>
         </section>
     </main>
+    <script src="../js/confirmacao.js"></script>
 </body>
 </html>

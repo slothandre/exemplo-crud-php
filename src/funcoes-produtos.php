@@ -105,5 +105,17 @@
         } catch (Exception $erro) {
             die("Erro ao atualizar: ".$erro->getMessage());
         }
-      }
+    }
+
+    function excluirProduto(PDO $conexao, int $id):void{
+        $sql = "DELETE FROM produtos WHERE id = :id";
+
+        try {
+            $query = $conexao->prepare($sql);
+            $query->bindValue(":id", $id, PDO::PARAM_INT);
+            $query->execute();
+        } catch (Exception $erro) {
+            die("Erro ao excluir: ".$erro->getMessage());
+        }
+    };
 ?>
