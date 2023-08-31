@@ -32,6 +32,7 @@
                         <p class="card-text"><b>Preço: </b><?=formatarPreco($produto["preco"])?></p>
                         <p class="card-text"><b>Quantidade: </b><?=$produto["quantidade"]?></p>
                         <p class="card-text"><b>Preço total: </b><?=formatarPreco($produto["preco_total"])?></p>
+                        <p class="card-text"><b>Descrição: </b><?=$produto["descricao"]?></p>
                     </div>
                     <div class="card-footer">
                         <p class="card-link row justify-content-around">
